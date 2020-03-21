@@ -13,13 +13,13 @@ const messageSchema = new mongoose.Schema({
     }
 });
 
-messageSchema.pre('remove', async function(next){
+messageSchema.pre("remove", async function(next){
 //find user
 //remove id of the message from their messages list
 //save that user
 //return next
 try {
-    let user = await User.findById(this.userID)
+    let user = await User.findById(this.user)
     user.message.remove(this.id);
     await user.save();
     return next();
