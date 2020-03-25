@@ -8,9 +8,10 @@ background-color: #e6ecf0;
 
 .navbar a {
   font-weight: bold;
+  color: white;
 }
 
-.navbar li:hover {
+.navbar a:hover {
   color: white;
   text-decoration: underline;
   cursor: pointer;
@@ -29,7 +30,7 @@ ul.nav.navbar-nav li {
 }
 
 .onboarding > .navbar {
-  background-image: url("");
+  background-image: url("./images/nav-bg.png");
   background-size: 100% 100%;
 }
 
