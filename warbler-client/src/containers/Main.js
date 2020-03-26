@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import Homepage from "../components/Homepage";
 
 
-const Main = props => {
+const Main = () => {
     return (
         <div className="container">
            <Switch>
@@ -21,4 +21,4 @@ function mapStateToProps(state) {
     };
 };
 
-export default withRouter(connect(mapStateToProps, null))(Main);
+export default withRouter(connect(mapStateToProps)(Main));
