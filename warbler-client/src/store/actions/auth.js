@@ -25,9 +25,10 @@ export function authUser(type, userData) {
                 resolve(); //indicate that API call succeeds
             })
             .catch(err => {
-                dispatch(addError(err.message));
+                console.log(err)
+                dispatch(addError(err));
                 reject(); //indicate the api failed
-            })
-        })
-    }
+            });
+        });
+    };
 }
