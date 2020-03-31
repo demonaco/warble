@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import {fetchMaster } from "../store/actions/messages";
+import MessageItem from "../components/MessageItem";
 
 class MessageList extends Component {
     componentDidMount(){
@@ -15,7 +16,8 @@ class MessageList extends Component {
             text={m.text} 
             username={m.user.username}
             profileImageUrl={m.user.profileImageUrl}/>
-        ))
+        ));
+        return messageList;
 }
 }
 
