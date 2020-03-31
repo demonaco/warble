@@ -1,4 +1,4 @@
-import { LOAD_MESSAGE, REMOVE_MESSAGE, LOAD_MESSAGES } from "../actionTypes";
+import { LOAD_MESSAGES, REMOVE_MESSAGE, LOAD_MESSAGES } from "../actionTypes";
 
 const message = (state= [], action) => {
     switch (action.type) {
@@ -7,4 +7,6 @@ const message = (state= [], action) => {
             default:
                 return state;
     }
-}
+};
+
+export default message;
