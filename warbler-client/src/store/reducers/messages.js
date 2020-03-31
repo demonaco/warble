@@ -1,4 +1,4 @@
-import { LOAD_MESSAGES, REMOVE_MESSAGE, LOAD_MESSAGES } from "../actionTypes";
+import { LOAD_MESSAGES, REMOVE_MESSAGE } from "../actionTypes";
 
 const message = (state= [], action) => {
     switch (action.type) {
