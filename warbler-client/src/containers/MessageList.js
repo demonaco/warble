@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import {fetchMaster } from "../store/actions/messages";
+import { fetchMessages } from "../store/actions/messages";
 import MessageItem from "../components/MessageItem";
 
 class MessageList extends Component {
@@ -8,7 +8,7 @@ class MessageList extends Component {
         this.props.fetchMessages();
     }
     render() {
-        const { message } = this.props
+        const { messages } = this.props
         let messageList = messages.map(m => (
             <MessageItem 
             key={m._id} 
