@@ -5,6 +5,7 @@ import Homepage from "../components/Homepage";
 import AuthForm from "../components/Authform";
 import { authUser } from "../store/actions/auth";
 import { removeError } from "../store/actions/errors";
+import withAuth from "../hocs/withAuth";
 
 
 const Main = props => {
@@ -24,6 +25,9 @@ const Main = props => {
                     <AuthForm removeError={removeError} errors={errors} onAuth={authUser} buttonText="Sign me up" heading="Join Warbler today" {...props} />
                 )
             }}
+            />
+            <Route path="/users/:id/messages/new" 
+            component={withAuth(MessageForm)} 
             />
       </Switch>
     </div>
