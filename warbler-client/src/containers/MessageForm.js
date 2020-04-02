@@ -13,16 +13,28 @@ class MessageForm extends Component {
 
 handleNewMessage = event => {
     event.preventDefault();
+    this.props.postNewMessage(this.state.message)
+    this.setState({ message: "" });
+    this.props.history.push("/");
 };
 
-    render(){
+    render() {
         return (
             <form onSubmit={this.handleNewMessage}>
-                {this.props.errors && (
+                {this.props.errors.message && (
                     <div className="alert alert-danger">
                         {this.props.errors}
                     </div>
                     )}
+                    <input 
+                   type="text" className="form-control" 
+                   value={this.state.message} 
+                   onChange={e => this.setState({ message: e.target.value })}
+                   />
+                    <button type="submit" className="btn btn-sucess pull-right">
+                    Add my message
+                    </button>
+
             </form>
         )
     }
